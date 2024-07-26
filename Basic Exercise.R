@@ -27,5 +27,5 @@ over.23<- stock.prices>23
 stock.prices[over.23]
 
 #Use a built-in function to find the day the price was the highest
-max(stock.prices)
+stock.prices[stock.prices==max(stock.prices)]
 

@@ -47,3 +47,13 @@ mat2[2:3,2:3]
 # [24,25]
 
 print(mat2[4:5,4:5])
+##########################################
+#EX 7:Ex 7: What is the sum of all the elements in mat2?
+print(sum(mat2))
+##########################################
+# 
+# Ex 8: Ok time for our last exercise! Find out how to 
+# use runif() to create a 4 by 5 matrix consisting of 20 
+# random numbers (4*5=20).
+
+matrix(runif(20,min=1,max=20),nrow=4)

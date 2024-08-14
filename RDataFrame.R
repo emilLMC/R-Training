@@ -25,5 +25,14 @@ as.data.frame(mat)
 #we'll use this df variable for the rest of the exercises.
 df<-mtcars
 df
+##########################################################
+# Ex 5: Display the first 6 rows of df
+head(df)
+df[1:6,]
+##########################################################
+#Ex 6Ex 6: What is the average mpg value for all the cars?
+mean(df$mpg)
+#########################################################
+# Ex 7: Select the rows where all cars have 6 cylinders (cyl column)
 
 

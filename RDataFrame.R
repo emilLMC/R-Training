@@ -34,5 +34,31 @@ df[1:6,]
 mean(df$mpg)
 #########################################################
 # Ex 7: Select the rows where all cars have 6 cylinders (cyl column)
+df[df$cyl==6,]
+#OR
+subset(df,cyl==6)
+#########################################################
+# Ex 8: Select the columns am,gear, and carb.
+df[,c('am','gear','carb')]
+#########################################################
+# Ex 9: Create a new column called performance, which is 
+# calculated by hp/wt.
+df$performance<- df$hp/df$wt
+head(df)
+#########################################################
+# Ex 10: Your performance column will have several 
+# decimal place precision. 
+# Figure out how to use round() 
+# (check help(round)) to reduce this accuracy to only 2 decimal places.
+df$performance<-round(df$performance,digit=2)
+head(df)
+#########################################################
+# Ex 10: What is the average mpg for cars that have more than 
+# 100 hp AND a wt value of more than 2.5.
 
+mean(subset(df,hp>100 & wt>2.5)$mpg)
+
+#########################################################
+# Ex 11: What is the mpg of the Hornet Sportabout?
+df["Hornet Sportabout",]$mpg
 

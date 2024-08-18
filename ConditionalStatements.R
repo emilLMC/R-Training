@@ -29,7 +29,11 @@ if(is.matrix(x)){
 #Ex 3: Create a script that given a numeric vector x with a length 3, will 
 # print out the elements in order from high to low. You must use if,else if, 
 # and else statements for your logic. (This code will be relatively long)
-x <- c(3,7,1)
+
+first<-2
+sec<-100
+thir<-22
+x <- c(first,sec,thir)
 if(x[1]>x[2]){
 first<-x[1]
 sec<-x[2]
@@ -44,4 +48,22 @@ if(x[3]>first & x[3]>sec){
   thir<-sec
 } else if (x[3]<first & x[3]<sec){
   thir<-x[3]
+} else {
+  thir<-sec
+  sec<-x[3]
 }
+print(c(first," ",sec," ",thir))
+###############################################################################
+#Ex 4: Write a script that uses if,else if, and else statements to
+# print the max element in a numeric vector with 3 elements.
+# SOLUTION : :
+
+x<- c(12,33,59)
+if(x[1]>x[2] & x[1]>x[3]){
+  print(x[1])
+}else if (x[2]>x[1] & x[2]>x[3]){
+  print(x[2])
+}else{
+  print (x[3])
+}
+
